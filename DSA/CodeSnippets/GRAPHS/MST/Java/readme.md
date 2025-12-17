@@ -1,0 +1,1 @@
+![Input Graph](MST.png)

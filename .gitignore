@@ -24,7 +24,7 @@ build/
 *.dll
 *.so
 *.a
-
+*.DS_Store
 # CMake
 CMakeFiles/
 CMakeCache.txt

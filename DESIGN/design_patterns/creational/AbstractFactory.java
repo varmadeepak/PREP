@@ -1,5 +1,3 @@
-// AbstractFactoryLoggerDemo.java
-
 // ===== Abstract Products =====
 interface InfoLogger {
     void log(String message);

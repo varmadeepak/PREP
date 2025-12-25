@@ -8,6 +8,7 @@ class EMIPayment implements Payment {
     }
     @Override
     public void pay(double amount) {
+        System.out.println("<===== EMI =====>");
         paymentGateway.processPayment(amount);
     }
     
@@ -19,6 +20,7 @@ class SubscriptionPayment implements Payment {
     }
     @Override
     public void pay(double amount) {
+        System.out.println("<===== SUBSCRIPTION =====>");
         paymentGateway.processPayment(amount);
     }
     
@@ -26,14 +28,14 @@ class SubscriptionPayment implements Payment {
 interface PaymentGateway {
     void processPayment(double amount);
 }
-class RazorPayPaymentGatway implements PaymentGateway {
+class RazorPayPaymentGateway implements PaymentGateway {
     @Override
     public void processPayment(double amount) {
          System.out.println("[RAZORPAY] Payment being done of amount : " + amount);
     }
     
 }
-class StripePaymentGatway implements PaymentGateway {
+class StripePaymentGateway implements PaymentGateway {
     @Override
     public void processPayment(double amount) {
         System.out.println("[STRIPE] Payment being done of amount : " + amount);
@@ -46,7 +48,7 @@ public class BridgeDemo {
         Payment razorPayWithEMI = new EMIPayment(razorPay);
         razorPayWithEMI.pay(5000);
 
-        PaymentGateway stripe = new StripePaymentGatway();
+        PaymentGateway stripe = new StripePaymentGateway();
         Payment stripeWithEMI = new EMIPayment(stripe);
         stripeWithEMI.pay(5000);
 

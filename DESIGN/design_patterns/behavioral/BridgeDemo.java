@@ -1,6 +1,8 @@
+// ================= ABSTRACTION =================
 interface Payment {
     void pay(double amount);
 }
+// ============ REFINED ABSTRACTIONS =============
 class EMIPayment implements Payment {
     private final PaymentGateway paymentGateway;
     EMIPayment(PaymentGateway paymentGateway) {
@@ -25,9 +27,11 @@ class SubscriptionPayment implements Payment {
     }
     
 }
+// ================= IMPLEMENTOR =================
 interface PaymentGateway {
     void processPayment(double amount);
 }
+// ============== CONCRETE IMPLEMENTORS ==========
 class RazorPayPaymentGateway implements PaymentGateway {
     @Override
     public void processPayment(double amount) {

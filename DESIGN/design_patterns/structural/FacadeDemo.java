@@ -1,3 +1,4 @@
+package DESIGN.design_patterns.structural;
 // ============== SUBSYSTEMS ==========
 class InventoryService {
     public void validateOrder(String orderId) {

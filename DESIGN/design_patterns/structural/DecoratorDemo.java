@@ -1,3 +1,4 @@
+package DESIGN.design_patterns.structural;
 interface Price{
     double getPrice();
 }

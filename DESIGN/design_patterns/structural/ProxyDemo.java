@@ -1,3 +1,6 @@
+import OrderService;
+
+package DESIGN.design_patterns.structural;
 interface OrderService {
     void placeOrder(String orderId);
 }

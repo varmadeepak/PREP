@@ -5,7 +5,7 @@ public class LoginManager {
     public LoginManager() {
         this.loginStrategy = null;
     }
-    public void setLoginStrategy(int loginMethod) {
+    public void setLoginStrategy(LoginMe) {
         if(LoginMethods.USERNAME_PASSWORD.ordinal() == loginMethod) {
             loginStrategy = new UserNamePassStrategy();
         }

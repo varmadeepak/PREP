@@ -1,4 +1,7 @@
 // ===== RECEIVER =====
+
+import DESIGN.design_patterns.structural.OrderService;
+
 class OrderService{
     public void placeOrder() {
         System.out.println("Order PLACED successfully");

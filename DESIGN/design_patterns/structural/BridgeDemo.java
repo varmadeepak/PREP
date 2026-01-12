@@ -1,4 +1,11 @@
+package DESIGN.design_patterns.structural;
 // ================= ABSTRACTION =================
+
+import EMIPayment;
+import Payment;
+import PaymentGateway;
+import SubscriptionPayment;
+
 interface Payment {
     void pay(double amount);
 }

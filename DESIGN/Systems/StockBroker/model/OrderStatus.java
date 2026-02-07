@@ -1,0 +1,12 @@
+package model;
+public enum OrderStatus {
+ CREATED,
+ VALIDATED,
+ SENT,
+ PARTIALLY_FILLED,
+ FILLED,
+ CONFIRMED,
+ CANCELLED,
+ REJECTED
+
+}
